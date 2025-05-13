@@ -1,4 +1,4 @@
-mport streamlit as st
+import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -45,4 +45,5 @@ ax2.set_title('Ventas de Competidores por País')
 st.pyplot(fig2)
 
 st.write('Desarrollado para análisis de internacionalización de operaciones en Centroamérica.')
+
 
