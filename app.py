@@ -1,4 +1,4 @@
-import streamlit as st
+mport streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -9,10 +9,10 @@ st.set_page_config(page_title='Dashboard de Internacionalización de Zapatos en 
 # Cargar los datos desde los archivos CSV
 @st.cache_data
 def load_data():
-    demanda_df = pd.read_csv('https://raw.githubusercontent.com/tu_usuario/tu_repositorio/main/demanda_potencial.csv')
-    barreras_df = pd.read_csv('https://raw.githubusercontent.com/tu_usuario/tu_repositorio/main/barreras_por_pais.csv')
-    riesgo_df = pd.read_csv('https://raw.githubusercontent.com/tu_usuario/tu_repositorio/main/riesgo_pais.csv')
-    ventas_df = pd.read_csv('https://raw.githubusercontent.com/tu_usuario/tu_repositorio/main/ventas.csv')
+    demanda_df = pd.read_csv('https://raw.githubusercontent.com/DiegoSal123/dashboard-zapateria/main/demanda_potencial.csv')
+    barreras_df = pd.read_csv('https://raw.githubusercontent.com/DiegoSal123/dashboard-zapateria/main/barreras_por_pais.csv')
+    riesgo_df = pd.read_csv('https://raw.githubusercontent.com/DiegoSal123/dashboard-zapateria/main/riesgo_pais.csv')
+    ventas_df = pd.read_csv('https://raw.githubusercontent.com/DiegoSal123/dashboard-zapateria/main/ventas.csv')
     return demanda_df, barreras_df, riesgo_df, ventas_df
 
 demanda_df, barreras_df, riesgo_df, ventas_df = load_data()
@@ -45,5 +45,4 @@ ax2.set_title('Ventas de Competidores por País')
 st.pyplot(fig2)
 
 st.write('Desarrollado para análisis de internacionalización de operaciones en Centroamérica.')
-
 
